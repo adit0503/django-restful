@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from games.models import Game
 
-class GameSerializer(serializers.Serializers):
+class GameSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(max_length=120)
     release_date = serializers.DateTimeField()
